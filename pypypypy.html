@@ -19,6 +19,9 @@
       cursor: pointer;
       margin: 5px;
     }
+    #reset-btn {
+      margin-top: 20px; /* 초기화 버튼을 아래로 밀기 */
+    }
   </style>
 </head>
 <body>
@@ -28,33 +31,3 @@
 
   <button onclick="increase()">클릭</button>
   <button onclick="decrease()">감소</button>
-  <button onclick="reset()">초기화</button>
-
-  <script>
-    let count = 0;
-    const initialValue = 0;
-
-    function updateDisplay() {
-      document.getElementById('counter').textContent = count;
-    }
-
-    function increase() {
-      count++;
-      updateDisplay();
-    }
-
-    function decrease() {
-      if (count > 0) {
-        count--;
-        updateDisplay();
-      }
-    }
-
-    function reset() {
-      count = initialValue;
-      updateDisplay();
-    }
-  </script>
-
-</body>
-</html>
